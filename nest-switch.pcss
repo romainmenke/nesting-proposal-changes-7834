@@ -1,0 +1,31 @@
+.block {
+	color: green;
+	box-sizing: border-box;
+	height: auto;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+
+	@nest .some-ancestor-context & {
+		color: blue;
+	}
+
+	@nest .some-preceding-context ~ & {
+		color: yellow;
+	}
+}
+
+p + p {
+	padding-top: 0.25rem;
+
+	@nest .some-ancestor-context & {
+		padding-top: 0.5rem;
+	}
+
+	/* this will not match what you would expect */
+	@nest .some-preceding-context ~ & {
+		padding-top: 0.5rem;
+	}
+}
