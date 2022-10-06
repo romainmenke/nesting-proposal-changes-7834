@@ -52,13 +52,13 @@
 		@media (min-width: 80rem) {
 			right: 4rem;
 		}
-	}
 
-	&.block--orange .block__element {
-		text-decoration-color: black;
+		.block--orange & {
+			text-decoration-color: black;
 
-		@media (prefers-color-scheme: dark) {
-			text-decoration-color: white;
+			@media (prefers-color-scheme: dark) {
+				text-decoration-color: white;
+			}
 		}
 	}
 }
