@@ -20,12 +20,12 @@
 p + p {
 	padding-top: 0.25rem;
 
-	@nest .some-ancestor-context & {
+	@nest article & {
 		padding-top: 0.5rem;
 	}
 
 	/* this will not match what you would expect */
-	@nest .some-preceding-context ~ & {
+	@nest h2 ~ & {
 		padding-top: 0.5rem;
 	}
 }

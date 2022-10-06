@@ -21,10 +21,10 @@ p + p {
 	padding-top: 0.25rem;
 }
 
-.some-ancestor-context p + p {
+article p + p {
 	padding-top: 0.5rem;
 }
 
-.some-preceding-context ~ p + p {
+h2 ~ p + p {
 	padding-top: 0.5rem;
 }

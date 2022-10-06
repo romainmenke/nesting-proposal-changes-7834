@@ -20,11 +20,11 @@
 p + p {
 	padding-top: 0.25rem;
 
-	.some-ancestor-context & {
+	article & {
 		padding-top: 0.5rem;
 	}
 
-	.some-preceding-context ~ & {
+	h2 ~ & {
 		padding-top: 0.5rem;
 	}
 }
