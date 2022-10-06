@@ -34,7 +34,7 @@
 		}
 	}
 
-	.block__element {
+	& .block__element {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
@@ -52,13 +52,13 @@
 		@media (min-width: 80rem) {
 			right: 4rem;
 		}
-	}
 
-	&.block--orange .block__element {
-		text-decoration-color: black;
+		@nest .block--orange & {
+			text-decoration-color: black;
 
-		@media (prefers-color-scheme: dark) {
-			text-decoration-color: white;
+			@media (prefers-color-scheme: dark) {
+				text-decoration-color: white;
+			}
 		}
 	}
 }
