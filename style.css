@@ -46,6 +46,10 @@
 	}
 }
 
+.block + .block {
+	padding-top: 3rem;
+}
+
 .block__element {
 	align-items: center;
 	display: flex;
@@ -78,4 +82,8 @@
 	.block--orange .block__element {
 		text-decoration-color: white;
 	}
+}
+
+.block + .block .block__element  {
+	right: 1rem;
 }
