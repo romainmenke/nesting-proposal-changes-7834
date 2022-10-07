@@ -1,3 +1,8 @@
+/* 
+ - current draft
+ - only "@nest" when needed
+ - with relative selectors support
+ */
 .block {
 	color: green;
 	box-sizing: border-box;
@@ -22,11 +27,11 @@
 		color: lime;
 	}
 
-	@nest &:hover {
+	&:hover {
 		outline: 2px solid currentColor;
 	}
 
-	@nest &.block--orange {
+	&.block--orange {
 		color: orange;
 
 		@media (prefers-color-scheme: dark) {
@@ -34,7 +39,7 @@
 		}
 	}
 
-	@nest & .block__element {
+	.block__element {
 		align-items: center;
 		display: flex;
 		flex-direction: column;

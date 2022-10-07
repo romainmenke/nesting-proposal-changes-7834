@@ -1,3 +1,6 @@
+/* 
+ - scss
+ */
 .block {
 	color: green;
 	box-sizing: border-box;
@@ -17,14 +20,18 @@
 	}
 }
 
-p + p {
-	padding-top: 0.25rem;
+p {
+	font-size: 1.125rem;
 
-	article & {
-		padding-top: 0.5rem;
-	}
+	& + & {
+		padding-top: 0.25rem;
 
-	h2 ~ & {
-		padding-top: 0.5rem;
+		article & {
+			padding-top: 0.5rem;
+		}
+
+		h2 ~ & {
+			padding-top: 0.5rem;
+		}
 	}
 }

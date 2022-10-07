@@ -1,3 +1,7 @@
+/* 
+ - proposal in #7834
+ - forced to need "@nest;"
+ */
 .block {
 	color: green;
 	box-sizing: border-box;
@@ -18,16 +22,20 @@
 	}
 }
 
-p + p {
-	padding-top: 0.25rem;
+p {
+	font-size: 1.125rem;
 
-	@nest;
-	article & {
-		padding-top: 0.5rem;
-	}
+	+ & {
+		padding-top: 0.25rem;
 
-	/* this will not match what you would expect */
-	h2 ~ & {
-		padding-top: 0.5rem;
+		@nest;
+		article & {
+			padding-top: 0.5rem;
+		}
+
+		/* this will not match what you would expect */
+		h2 ~ & {
+			padding-top: 0.5rem;
+		}
 	}
 }

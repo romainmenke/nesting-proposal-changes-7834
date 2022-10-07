@@ -1,6 +1,6 @@
 /* 
  - current draft
- - only "@nest" when needed
+ - always "@nest" (this is a coding style preference)
  */
 .block {
 	color: green;
@@ -24,7 +24,7 @@
 p {
 	font-size: 1.125rem;
 
-	& + & {
+	@nest & + & {
 		padding-top: 0.25rem;
 
 		@nest article & {

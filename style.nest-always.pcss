@@ -1,6 +1,6 @@
 /* 
  - current draft
- - only "@nest" when needed
+ - always "@nest" (this is a coding style preference)
  */
 .block {
 	color: green;
@@ -26,11 +26,11 @@
 		color: lime;
 	}
 
-	&:hover {
+	@nest &:hover {
 		outline: 2px solid currentColor;
 	}
 
-	&.block--orange {
+	@nest &.block--orange {
 		color: orange;
 
 		@media (prefers-color-scheme: dark) {
@@ -38,7 +38,7 @@
 		}
 	}
 
-	& .block__element {
+	@nest & .block__element {
 		align-items: center;
 		display: flex;
 		flex-direction: column;

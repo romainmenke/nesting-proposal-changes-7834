@@ -1,3 +1,6 @@
+/* 
+ - css as it exists today
+ */
 .block {
 	color: green;
 	box-sizing: border-box;
@@ -15,6 +18,10 @@
 
 .some-preceding-context ~ .block {
 	color: yellow;
+}
+
+p {
+	font-size: 1.125rem;
 }
 
 p + p {

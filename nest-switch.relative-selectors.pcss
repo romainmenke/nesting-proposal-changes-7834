@@ -1,6 +1,7 @@
 /* 
  - current draft
  - only "@nest" when needed
+ - with relative selectors support
  */
 .block {
 	color: green;
@@ -24,7 +25,7 @@
 p {
 	font-size: 1.125rem;
 
-	& + & {
+	+ & {
 		padding-top: 0.25rem;
 
 		@nest article & {
